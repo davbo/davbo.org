@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div class="g2 date-gutter">
+    <p class="date"><span>{{ page.date | date_to_string }}</span></p>
+</div>
+<div class="g2">
+    <article>
+        <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+        <section class="entry">{{ content }}</section>
+    </article>
+</div>
