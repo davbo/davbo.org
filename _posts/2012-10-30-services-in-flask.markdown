@@ -15,7 +15,7 @@ So, what do Services look like? Take a look at our [`KVService`](https://github.
 
 What's more, you can safely rely on the fact that within a single request Services accessed through `from_context` will *always* return the **same** object. See the [tests](https://github.com/ox-it/moxie/blob/master/moxie/tests/test_services.py#L17) for examples of this behaviour.
 
-The API can be further sugared by using a LocalProxy:
+The API can be further sugared by using a [LocalProxy](http://werkzeug.pocoo.org/docs/local/#werkzeug.local.LocalProxy):
 {% highlight python %}
 kv_store = LocalProxy(KVService.from_context)
 {% endhighlight %}
