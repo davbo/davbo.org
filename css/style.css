@@ -184,6 +184,7 @@ Change widths as necessary
 /* Increased body size for legibility */
 @media only screen and (min-width: 1400px) { 
 	body {font-size:110%; max-width:1280px} /* 18.5px / 28px */
+}
 
 
 /* PRINT */
