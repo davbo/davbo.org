@@ -12,7 +12,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href='http://fonts.googleapis.com/css?family=Dosis:200|Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
-        <link href="/css/style.css" rel="stylesheet" />
+
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+        <link href="{{ SITEURL }}/theme/css/main.css" rel="stylesheet" />
         <script type="text/javascript">
 
             var _gaq = _gaq || [];
@@ -43,7 +45,8 @@
          </header>
          <div class="cf"></div>
          <div id="content">
-             {{ content }}
+             {% block content %}
+             {% endblock %}
          </div>
          <footer class="g3 cf">
          <small><span class="license">Creative Commons: Attribution-NonCommercial-ShareAlike</span></small>

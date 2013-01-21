@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Show last 10 posts here -->
+{% for article in articles_page.object_list %}
+<div class="g1">
+    <article>
+        <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+        <section class="entry">{{ article.summary }}</section>
+        <p class="date"><span>{{ article.locale_date }}</span></p>
+    </article>
+</div>
+{% endfor %}
+{% endblock content %}

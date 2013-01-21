@@ -1,9 +1,6 @@
----
-layout: post
-published: true
-title: Meet Moxie
-description: We're working on a new version of Mobile Oxford...
----
+Title: Meet Moxie
+Date: 30/10/2012
+Summary: We're working on a new version of Mobile Oxford...
 
 Before you can meet Moxie, a bit of a history lesson is required.
 

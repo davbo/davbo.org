@@ -1,9 +1,6 @@
----
-layout: post
-published: true
-title: Services in Flask
-description: While abstracting our Flask application from the transport layer we've introduced Services...
----
+Title: Services in Flask
+Date: 1/11/2012
+Summary: While abstracting our Flask application from the transport layer we've introduced Services...
 
 Due to the nature of [Moxie](/meet-moxie/) and [Mobile Oxford](http://m.ox.ac.uk) we require a highly configurable application (such that it could be deployed at another institution). There were a couple of projects out there which offer this to some degree, [Flask-YAMLConfig](http://pypi.python.org/pypi/Flask-YAMLConfig) for example. Our own attempts have produced what we've rather creatively named *Services*.
 
@@ -16,8 +13,8 @@ So, what do Services look like? Take a look at our [`KVService`](https://github.
 What's more, you can safely rely on the fact that within a single request Services accessed through `from_context` will *always* return the **same** object. See the [tests](https://github.com/ox-it/moxie/blob/master/moxie/tests/test_services.py#L17) for examples of this behaviour.
 
 The API can be further sugared by using a [LocalProxy](http://werkzeug.pocoo.org/docs/local/#werkzeug.local.LocalProxy):
-{% highlight python %}
-kv_store = LocalProxy(KVService.from_context)
-{% endhighlight %}
+
+    :::python
+    kv_store = LocalProxy(KVService.from_context)
 
 We're still actively working on this approach, but so far I've been pleasantly surprised with it. We have fine-grained configuration and a clear separation between application logic and the transport layer.

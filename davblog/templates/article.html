@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="g2 date-gutter">
+    <p class="date"><span>{{ article.locale_date }}</span></p>
+</div>
+<div class="g2">
+    <article>
+        <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+        <section class="entry">{{ article.content }}</section>
+    </article>
+</div>
+{% endblock content %}
